@@ -1703,6 +1703,33 @@
   }
 
 }
+    /* =====================================================
+   Mobile : StudentPR ในทุกหน้าจอ
+   ซ่อน Desktop + Tablet และแสดง Mobile อย่างเดียว
+   ===================================================== */
+@media (max-width:640px){
+
+  /* ซ่อนตัวอย่าง Desktop และ Tablet */
+  .device-showcase .device.desktop,
+  .device-showcase .device.tablet{
+    display:none !important;
+  }
+
+  /* เหลือ Mobile ตัวเดียว */
+  .device-showcase{
+    display:block !important;
+    margin-top:22px;
+  }
+
+  .device-showcase .device.mobile{
+    display:block !important;
+
+    width:100%;
+    max-width:330px !important;
+
+    margin:0 auto !important;
+  }
+}
 
 
 </style>
