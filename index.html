@@ -1668,8 +1668,65 @@
   display:block;
 }
 
-/* =====================================================
-   FIX 1 : ปุ่มล่างบนมือถือไม่ให้ล้นจอ
+
+ /* =====================================================
+   MOBILE CTA : ล็อกให้อยู่ใน viewport เสมอ
+   ===================================================== */
+@media (max-width:640px){
+
+  .mobile-cta{
+    display:block !important;
+
+    position:fixed !important;
+
+    left:50% !important;
+    right:auto !important;
+
+    bottom:max(
+      10px,
+      env(safe-area-inset-bottom)
+    ) !important;
+
+    transform:translateX(-50%) !important;
+
+    width:calc(100% - 20px) !important;
+    max-width:420px !important;
+
+    margin:0 !important;
+    padding:6px !important;
+
+    box-sizing:border-box !important;
+    overflow:hidden !important;
+
+    border-radius:16px !important;
+
+    z-index:45;
+  }
+
+  .mobile-cta .btn{
+    display:flex !important;
+
+    width:100% !important;
+    min-width:0 !important;
+    max-width:100% !important;
+
+    height:auto !important;
+    min-height:44px !important;
+
+    margin:0 !important;
+    padding:10px 14px !important;
+
+    box-sizing:border-box !important;
+
+    align-items:center;
+    justify-content:center;
+
+    white-space:normal !important;
+
+    border-radius:12px !important;
+  }
+
+}
    ===================================================== */
 @media (max-width: 640px){
 
