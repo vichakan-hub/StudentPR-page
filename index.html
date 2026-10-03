@@ -1814,7 +1814,7 @@
 
     <div class="nav-actions">
       <button class="btn btn-secondary" type="button" onclick="openChoice()">เลือกเวอร์ชัน</button>
-      <button class="btn btn-primary" type="button" onclick="openStudentPR()">เข้าสู่ StudentPR</button>
+      <button class="btn btn-primary" type="button" onclick="openStudentPR()">ดูผลการเรียน</button>
     </div>
   </div>
 </header>
@@ -1840,7 +1840,7 @@
         </p>
         <div class="hero-actions">
           <button class="btn btn-primary btn-lg" type="button" onclick="openStudentPR()">
-            🚀 <span id="smartBtnText">เข้าสู่ StudentPR</span>
+            🚀 <span id="smartBtnText">ดูผลการเรียน</span>
           </button>
           <a class="btn btn-secondary btn-lg" href="#install">📲 วิธีติดตั้ง</a>
           <button class="btn btn-secondary btn-lg" type="button" onclick="openChoice()">เลือกเวอร์ชันเอง</button>
@@ -2425,13 +2425,13 @@
     const btn = document.getElementById("smartBtnText");
     if(isMobileDevice()){
       label.textContent = "พร้อมใช้งานบน Smartphone ของคุณ";
-      btn.textContent = "เข้าสู่ StudentPR Mobile";
+      btn.textContent = "ดูผลการเรียน";
     }else if(isTabletDevice()){
       label.textContent = "พร้อมใช้งานบน Tablet ของคุณ";
-      btn.textContent = "เข้าสู่ StudentPR Desktop";
+      btn.textContent = "ดูผลการเรียน";
     }else{
       label.textContent = "พร้อมใช้งานบน Desktop ของคุณ";
-      btn.textContent = "เข้าสู่ StudentPR Desktop";
+      btn.textContent = "ดูผลการเรียน";
     }
   }
   updateDeviceCopy();
