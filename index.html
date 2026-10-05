@@ -163,11 +163,13 @@
       margin-bottom:18px;
     }
     .eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--success);box-shadow:0 0 18px var(--success)}
-    h1{
-      font-size:clamp(3.5rem,8vw,7.8rem);line-height:.88;margin:0 0 20px;font-weight:800;letter-spacing:-.065em;
-      background:linear-gradient(180deg,#fff 0%,#dadcff 52%,#9db9ff 100%);
-      -webkit-background-clip:text;background-clip:text;color:transparent;
-    }
+h1{
+  font-size:clamp(2.5rem,4.6vw,4.6rem);
+  line-height:1.08;
+  margin:0 0 20px;
+  font-weight:800;
+  letter-spacing:-.065em;
+}
     .hero-copy h2{
       font-size:clamp(1.45rem,2.5vw,2.3rem);margin:0 0 16px;line-height:1.25;
     }
@@ -175,7 +177,7 @@
       color:var(--muted);font-size:1.08rem;line-height:1.9;max-width:680px;margin:0 0 28px;
     }
     .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
-    .device-note{margin-top:16px;color:#969dbe;font-size:.92rem}
+    .device-note{margin-top:16px;color:#969dbe;font-size:1.12rem;text-align:center;}
     .device-note strong{color:#fff}
 
     .logo-stage{
@@ -476,10 +478,14 @@
         padding:0 6px;
         line-height:1.6;
         overflow-wrap:anywhere;
+        text-align:center;
       }
 
       .hero{min-height:auto;padding:52px 0 50px}
-      h1{font-size:4.4rem}
+      h1{
+  font-size:3.2rem;
+  line-height:1.12;
+}
       .hero-copy h2{font-size:1.55rem}
       .hero-copy p{font-size:.98rem}
       .hero-actions{display:grid}
@@ -1788,36 +1794,113 @@
   }
 }
 
+.release-schedule{
+  margin:22px 0 28px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:22px;
+  overflow:hidden;
+  background:rgba(255,255,255,.055);
+  backdrop-filter:blur(12px);
+  box-shadow:0 18px 40px rgba(0,0,0,.16);
+}
+
+.release-title{
+  padding:14px 18px;
+  font-size:1.05rem;
+  font-weight:800;
+  color:#ffffff;
+  text-align:center;
+
+  background:linear-gradient(
+    135deg,
+    rgba(99,55,255,.55),
+    rgba(173,37,255,.42),
+    rgba(255,71,187,.32)
+  );
+
+  border-bottom:1px solid rgba(255,255,255,.10);
+}
+
+.release-row{
+  display:grid;
+  grid-template-columns:1fr auto;
+  align-items:center;
+  gap:14px;
+  padding:14px 18px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.release-date-head{
+  margin-top:4px;
+  font-size:.86rem;
+  font-weight:600;
+  color:#d8dcf5;
+}
+
+.release-row:last-child{
+  border-bottom:none;
+}
+
+.release-date{
+  color:#dfe3ff;
+  font-weight:600;
+}
+
+.release-time{
+  color:#ffffff;
+  font-weight:700;
+  white-space:nowrap;
+}
+
+.release-class{
+  justify-self:end;
+  padding:6px 12px;
+  border-radius:999px;
+  background:linear-gradient(135deg,#6337ff,#ad25ff);
+  color:#ffffff;
+  font-weight:800;
+  white-space:nowrap;
+}
+@media (max-width:640px){
+
+  .hero-actions{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    width:100% !important;
+    gap:12px !important;
+  }
+
+  .hero-actions .btn{
+    width:100% !important;
+    max-width:none !important;
+    margin:0 !important;
+    min-height:52px;
+  }
+
+
+
+}
+  @media (min-width:641px){
+
+  .hero-actions{
+    display:grid !important;
+    grid-template-columns:1fr 1fr;
+    width:100%;
+    gap:12px;
+  }
+
+  .hero-actions .btn{
+    width:100%;
+    margin:0;
+  }
+
+}
 
 </style>
 </head>
 <body>
 
-<header class="nav">
-  <div class="container nav-inner">
-<a class="brand" href="#top" aria-label="StudentPR">
-  <span class="brand-badge">
-    <img src="assets/studentpr-logo.png" alt="StudentPR Logo" class="brand-badge-logo">
-  </span>
 
-  <span class="brand-name">
-    Student<span class="brand-p">P</span><span class="brand-r">R</span>
-  </span>
-</a>
-
-    <nav class="nav-links">
-      <a href="#features">ความสามารถ</a>
-      <a href="#install">วิธีติดตั้ง</a>
-      <a href="#howto">วิธีใช้งาน</a>
-      <a href="#faq">คำถามที่พบบ่อย</a>
-    </nav>
-
-    <div class="nav-actions">
-      <button class="btn btn-secondary" type="button" onclick="openChoice()">เลือกเวอร์ชัน</button>
-      <button class="btn btn-primary" type="button" onclick="openStudentPR()">ดูผลการเรียน</button>
-    </div>
-  </div>
-</header>
 
 <main id="top">
   <section class="hero">
@@ -1825,29 +1908,47 @@
       <div class="hero-copy reveal">
         <div class="eyebrow"><i></i><span id="deviceLabel">พร้อมใช้งานบนทุกอุปกรณ์</span></div>
 <h1 class="hero-title">
-  Student<span class="brand-p">P</span><span class="brand-r">R</span>
+  ประกาศผลการเรียน<span class="brand-p"> 1</span>/<span class="brand-r">2569 </span>
 </h1>
 
 <div class="school-name">
   โรงเรียนท่าใหม่ “พูลสวัสดิ์ราษฎร์นุกูล”
 </div>
 
-<h2>ดูข้อมูลผลการเรียนของคุณ<br>ครบ จบ ในที่เดียว</h2>
-        <p>
-          ระบบสารสนเทศสำหรับนักเรียนที่ออกแบบให้เข้าถึงข้อมูลผลการเรียนได้ง่าย
-          ทั้งผลการเรียน GPA / GPAX รายละเอียดรายวิชา ความเสี่ยง และข้อมูลสำคัญที่เกี่ยวข้อง
-          ใช้งานได้ทั้งคอมพิวเตอร์ แท็บเล็ต และสมาร์ตโฟน
-        </p>
+<h2>ผ่านระบบ Student<span class="brand-p">P</span><span class="brand-r">R</span></h2>
+<div class="release-schedule">
+
+  <div class="release-title">
+    <div>📢 ตารางประกาศผลการเรียน</div>
+    <div class="release-date-head">6 ตุลาคม 2569</div>
+  </div>
+
+  <div class="release-row">
+    <div class="release-time">09.00 - 11.00 น.</div>
+    <div class="release-class">ม.3 และ ม.6</div>
+  </div>
+
+  <div class="release-row">
+    <div class="release-time">11.00 - 13.00 น.</div>
+    <div class="release-class">ม.2 และ ม.5</div>
+  </div>
+
+  <div class="release-row">
+    <div class="release-time">13.00 - 15.00 น.</div>
+    <div class="release-class">ม.1 และ ม.4</div>
+  </div>
+
+</div>
         <div class="hero-actions">
           <button class="btn btn-primary btn-lg" type="button" onclick="openStudentPR()">
             🚀 <span id="smartBtnText">ดูผลการเรียน</span>
           </button>
-          <a class="btn btn-secondary btn-lg" href="#install">📲 วิธีติดตั้ง</a>
-          <button class="btn btn-secondary btn-lg" type="button" onclick="openChoice()">เลือกเวอร์ชันเอง</button>
+          <a class="btn btn-secondary btn-lg" href="install.html">📲 วิธีติดตั้ง</a>
+          
         </div>
         <div class="device-note">
-          ระบบจะเลือกเวอร์ชันให้เหมาะกับอุปกรณ์อัตโนมัติ —
-          <strong>Tablet ใช้เวอร์ชัน Desktop</strong>
+          เข้าสู่ระบบด้วย —
+          <strong>รหัสนักเรียน และ วันเกิด</strong>
         </div>
       </div>
 
@@ -1860,510 +1961,10 @@
     </div>
   </section>
 
-  <section id="features">
-    <div class="container">
-      <div class="section-head reveal">
-        <div class="kicker">SMART STUDENT PORTAL</div>
-        <h3>
-  Student<span class="brand-p">P</span><span class="brand-r">R</span>
-  ทำอะไรได้บ้าง?
-</h3>
-        <p>ออกแบบให้ข้อมูลสำคัญของนักเรียนเข้าถึงได้รวดเร็ว อ่านง่าย และเหมาะกับทุกขนาดหน้าจอ</p>
-      </div>
 
-      <div class="feature-grid">
-        <article class="card reveal">
-          <div class="icon">📊</div>
-          <h4>ผลการเรียนของฉัน</h4>
-          <p>ตรวจสอบผลการเรียนแยกตามภาคเรียน พร้อมดูข้อมูลรายวิชาได้ในหน้าจอเดียว</p>
-        </article>
-        <article class="card reveal">
-          <div class="icon">🎓</div>
-          <h4>GPA และ GPAX</h4>
-          <p>ติดตามค่าเฉลี่ยผลการเรียนในแต่ละภาคเรียนและภาพรวมสะสมได้อย่างสะดวก</p>
-        </article>
-        <article class="card reveal">
-          <div class="icon">🏆</div>
-          <h4>Percentile Rank</h4>
-          <p>ดูตำแหน่งผลการเรียนของตนเองเมื่อเทียบกับกลุ่มนักเรียนในระดับชั้น เมื่อมีข้อมูลพร้อมใช้งาน</p>
-        </article>
-        <article class="card reveal">
-          <div class="icon">📚</div>
-          <h4>รายละเอียดรายวิชา</h4>
-          <p>ดูรหัสวิชา ชื่อวิชา หน่วยกิต เกรด และข้อมูลที่เกี่ยวข้องของแต่ละรายวิชา</p>
-        </article>
-        <article class="card reveal">
-          <div class="icon">⚠️</div>
-          <h4>ความเสี่ยงของฉัน</h4>
-          <p>ช่วยให้นักเรียนมองเห็นรายวิชาที่ควรติดตามและวางแผนการเรียนได้เร็วขึ้น</p>
-        </article>
-        <article class="card reveal">
-          <div class="icon">📝</div>
-          <h4>ข้อมูลสอบแก้ตัว</h4>
-          <p>เข้าถึงข้อมูลและสถานะที่เกี่ยวข้องกับการสอบแก้ตัวจากระบบ StudentPR</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="section-head reveal">
-        <div class="kicker">RESPONSIVE EXPERIENCE</div>
-        <h3>
-  Student<span class="brand-p">P</span><span class="brand-r">R</span>
-  ในทุกหน้าจอ
-</h3>
-        <p>Desktop และ Tablet ใช้ StudentPR Desktop ส่วน Smartphone ใช้ StudentPR Mobile เพื่อประสบการณ์ที่เหมาะสมกับหน้าจอ</p>
-      </div>
-
-<div class="device-showcase reveal">
-  <!-- Desktop -->
-  <div class="device desktop desktop-monitor">
-    <div class="screen">
-      <div class="desktop-topbar">
-        <div class="desktop-dots">
-          <span></span><span></span><span></span>
-        </div>
-        <div class="desktop-titlebar">
-  Student<span class="brand-p">P</span><span class="brand-r">R</span> Desktop
-</div>
-        <div class="desktop-status"></div>
-      </div>
-
-      <div class="mock-app desktop-app">
-        <div class="app-mini-top">
-          <div>
-            <div class="app-title">ภาพรวมของฉัน</div>
-            <div class="app-sub">สรุปผลการเรียนและรายการที่ต้องดำเนินการ</div>
-          </div>
-          <div class="mini-pill">99999 นางสาวตั้งใจ เรียนดี</div>
-        </div>
-
-        <div class="hero-card">
-          <div class="hero-row">
-            <div>
-              <div class="hero-topline">ภาพรวมของฉัน</div>
-              <div class="hero-name">นางสาวตั้งใจ เรียนดี</div>
-              <div class="hero-meta">ห้อง 2 • เลขที่ 25</div>
-            </div>
-            <div class="hero-button">ดูผลการเรียน</div>
-          </div>
-        </div>
-
-        <div class="kpi-grid-4">
-          <div class="kpi-box soft-blue">
-            <div class="kpi-label">GPAX ปัจจุบัน</div>
-            <div class="kpi-value">3.22</div>
-            <div class="kpi-note">ผลการเรียนสะสม</div>
-          </div>
-          <div class="kpi-box soft-pink">
-            <div class="kpi-label">เปอร์เซ็นไทล์</div>
-            <div class="kpi-value">-</div>
-            <div class="kpi-note">ยังไม่มีข้อมูลเปอร์เซ็นไทล์ของปีนี้</div>
-          </div>
-          <div class="kpi-box soft-green">
-            <div class="kpi-label">หน่วยกิตสะสม</div>
-            <div class="kpi-value">34.0</div>
-            <div class="kpi-note">หน่วยกิตที่นำมาคำนวณ</div>
-          </div>
-          <div class="kpi-box soft-cream">
-            <div class="kpi-label">GPA ภาคเรียนล่าสุด</div>
-            <div class="kpi-value">3.21</div>
-            <div class="kpi-note">ปีการศึกษา 2568 ภาคเรียนที่ 2</div>
-          </div>
-        </div>
-
-        <div class="panel-box">
-          <div class="panel-head">
-            <div>
-              <div class="panel-title">ความเสี่ยงของฉัน</div>
-              <div class="panel-sub">ข้อมูลปีการศึกษา 2569 ภาคเรียนที่ 1</div>
-            </div>
-            <div class="panel-action">ดูรายละเอียด</div>
-          </div>
-
-          <div class="risk-grid">
-            <div class="risk-box blue">
-              <div class="risk-label">วิชาที่รายงาน</div>
-              <div class="risk-value">14</div>
-              <div class="risk-note">กดเพื่อดูรายการ</div>
-            </div>
-            <div class="risk-box red">
-              <div class="risk-label">เสี่ยงด้านคะแนน</div>
-              <div class="risk-value">4</div>
-              <div class="risk-note">กดเพื่อดูรายการ</div>
-            </div>
-            <div class="risk-box orange">
-              <div class="risk-label">เสี่ยงด้านเวลาเรียน</div>
-              <div class="risk-value">0</div>
-              <div class="risk-note">กดเพื่อดูรายการ</div>
-            </div>
-          </div>
-
-          <div class="notice-bar">
-            พบรายวิชาที่ควรติดตาม 4 รายวิชา ควรตรวจสอบคะแนนและเวลาเรียน
-          </div>
-
-          <div class="subject-item">
-            <div class="subject-top">
-              <div>
-                <div class="subject-code">ว30223</div>
-                <div class="subject-name">เคมี 3</div>
-                <div class="subject-teacher">ครูผู้สอน ศศิประภา สุขบรร</div>
-              </div>
-              <div class="subject-score">คะแนน 33.3%</div>
-            </div>
-            <div class="subject-bottom">
-              <div class="subject-risk">เสี่ยงด้านคะแนน</div>
-              <div class="subject-link">ดูรายละเอียด</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Tablet -->
-  <div class="device tablet">
-    <div class="screen">
-      <div class="mock-app tablet-app">
-        <div class="app-mini-top">
-          <div>
-            <div class="app-title">ภาพรวมของฉัน</div>
-            <div class="app-sub">Student Academic Portal</div>
-          </div>
-          <div class="mini-pill">99999</div>
-        </div>
-
-        <div class="hero-card">
-          <div class="hero-topline">ภาพรวมของฉัน</div>
-          <div class="hero-name">นางสาวตั้งใจ เรียนดี</div>
-          <div class="hero-meta">ห้อง 2 • เลขที่ 25</div>
-        </div>
-
-        <div class="kpi-grid-4">
-          <div class="kpi-box soft-blue">
-            <div class="kpi-label">GPAX ปัจจุบัน</div>
-            <div class="kpi-value">3.22</div>
-            <div class="kpi-note">ผลการเรียนสะสม</div>
-          </div>
-          <div class="kpi-box soft-pink">
-            <div class="kpi-label">เปอร์เซ็นไทล์</div>
-            <div class="kpi-value">-</div>
-            <div class="kpi-note">ยังไม่มีข้อมูล</div>
-          </div>
-          <div class="kpi-box soft-green">
-            <div class="kpi-label">หน่วยกิตสะสม</div>
-            <div class="kpi-value">34.0</div>
-            <div class="kpi-note">หน่วยกิต</div>
-          </div>
-          <div class="kpi-box soft-cream">
-            <div class="kpi-label">GPA ล่าสุด</div>
-            <div class="kpi-value">3.21</div>
-            <div class="kpi-note">ภาคเรียนล่าสุด</div>
-          </div>
-        </div>
-
-        <div class="panel-box">
-          <div class="panel-head">
-            <div>
-              <div class="panel-title">ความเสี่ยงของฉัน</div>
-              <div class="panel-sub">ปีการศึกษา 2569 ภาคเรียนที่ 1</div>
-            </div>
-            <div class="panel-action">รายละเอียด</div>
-          </div>
-
-          <div class="risk-grid">
-            <div class="risk-box blue">
-              <div class="risk-label">วิชาที่รายงาน</div>
-              <div class="risk-value">14</div>
-              <div class="risk-note">กดเพื่อดูรายการ</div>
-            </div>
-            <div class="risk-box red">
-              <div class="risk-label">เสี่ยงด้านคะแนน</div>
-              <div class="risk-value">4</div>
-              <div class="risk-note">กดเพื่อดูรายการ</div>
-            </div>
-            <div class="risk-box orange">
-              <div class="risk-label">เสี่ยงด้านเวลาเรียน</div>
-              <div class="risk-value">0</div>
-              <div class="risk-note">กดเพื่อดูรายการ</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Mobile -->
-  <div class="device mobile">
-    <div class="screen">
-      <div class="mock-app mobile-app">
-        <div class="mobile-hero">
-          <div class="mobile-top">
-            <div class="mobile-logo">
-  🎓 Student<span class="brand-p">P</span><span class="brand-r">R</span>
-</div>
-            <div class="mobile-logout">↩</div>
-          </div>
-          <div class="mobile-hero-title">ภาพรวมของฉัน</div>
-          <div class="mobile-hero-sub">สรุปผลการเรียนและรายการที่ต้องดำเนินการ</div>
-          <div class="mobile-term">25357</div>
-        </div>
-
-        <div class="mobile-summary">
-          <div class="mobile-summary-top">ภาพรวมของฉัน</div>
-          <div class="mobile-summary-name">นางสาวตั้งใจ เรียนดี</div>
-          <div class="mobile-summary-meta">ห้อง 2 • เลขที่ 25</div>
-          <div class="mobile-summary-btn">ดูผลการเรียน</div>
-        </div>
-
-        <div class="kpi-grid-2">
-          <div class="kpi-box soft-blue">
-            <div class="kpi-label">GPAX ปัจจุบัน</div>
-            <div class="kpi-value">3.22</div>
-            <div class="kpi-note">ผลการเรียนสะสม</div>
-          </div>
-          <div class="kpi-box soft-pink">
-            <div class="kpi-label">เปอร์เซ็นไทล์</div>
-            <div class="kpi-value">-</div>
-            <div class="kpi-note">ยังไม่มีข้อมูลเปอร์เซ็นไทล์ของปีนี้</div>
-          </div>
-          <div class="kpi-box soft-green">
-            <div class="kpi-label">หน่วยกิตสะสม</div>
-            <div class="kpi-value">34.0</div>
-            <div class="kpi-note">หน่วยกิตที่นำมาคำนวณ</div>
-          </div>
-          <div class="kpi-box soft-cream">
-            <div class="kpi-label">GPA ภาคเรียนล่าสุด</div>
-            <div class="kpi-value">3.21</div>
-            <div class="kpi-note">ปีการศึกษา 2568 ภาคเรียนที่ 2</div>
-          </div>
-        </div>
-
-        <div class="mobile-panel-title">ความเสี่ยงของฉัน</div>
-
-        <div class="mobile-bottom-nav">
-          <div class="nav-pill active">หน้าแรก</div>
-          <div class="nav-pill">ผลการเรียน</div>
-          <div class="nav-pill">ความเสี่ยง</div>
-          <div class="nav-pill">ติดตั้ง</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    </div>
-  </section>
-
-  <section id="install">
-    <div class="container">
-      <div class="section-head reveal">
-        <div class="kicker">INSTALLATION</div>
-        <h3>
-  ติดตั้ง Student<span class="brand-p">P</span><span class="brand-r">R</span>
-  เป็นแอป
-</h3>
-        <p>เลือกอุปกรณ์ของคุณ แล้วทำตามขั้นตอนด้านล่าง สามารถเปิดใช้งานผ่าน Browser ได้โดยไม่จำเป็นต้องติดตั้ง</p>
-      </div>
-
-      <div class="split">
-        <div class="card qr-card reveal">
-<div class="qr-head-logo">
-  <img src="assets/studentpr-logo.png" alt="StudentPR Logo" class="qr-head-logo-img">
-</div>
-<h4 style="margin:0 0 6px">สแกนเพื่อเข้าใช้งาน</h4>
-<p>เลือก QR ให้ตรงกับอุปกรณ์</p>
-          <div class="qr-wrap">
-            <a class="qr-item" href="https://vichakan-hub.github.io/StudentPR-desktop/" target="_blank" rel="noopener">
-              <img src="assets/qr-desktop-tablet.png" alt="QR StudentPR Desktop และ Tablet">
-              <b>Desktop / Tablet</b>
-<small>
-  Student<span class="brand-p">P</span><span class="brand-r">R</span> Desktop
-</small>
-            </a>
-            <a class="qr-item" href="https://vichakan-hub.github.io/StudentPR-mobile/" target="_blank" rel="noopener">
-              <img src="assets/qr-mobile.png" alt="QR StudentPR Mobile">
-              <b>Mobile</b>
-<small>
-  Student<span class="brand-p">P</span><span class="brand-r">R</span> Mobile
-</small>
-            </a>
-          </div>
-        </div>
-
-        <div class="panel reveal">
-          <div class="tabs" data-tabs="install">
-            <button class="tab active" data-target="install-desktop">💻 Desktop</button>
-            <button class="tab" data-target="install-tablet">📱 Tablet</button>
-            <button class="tab" data-target="install-mobile">📲 Mobile</button>
-          </div>
-
-          <div class="tab-content active" id="install-desktop">
-            <div class="steps">
-              <div class="step"><div class="step-no">1</div><div><h5>
-  เปิด Student<span class="brand-p">P</span><span class="brand-r">R</span> Desktop
-</h5><p>เปิดด้วย Google Chrome หรือ Microsoft Edge จากปุ่มเข้าใช้งานบนหน้าเว็บนี้</p></div></div>
-              <div class="step"><div class="step-no">2</div><div><h5>เลือกติดตั้งแอป</h5><p>กดไอคอน Install ที่ Address Bar หรือเปิดเมนู Browser แล้วเลือกติดตั้ง StudentPR</p></div></div>
-              <div class="step"><div class="step-no">3</div><div><h5>ยืนยันการติดตั้ง</h5><p>กด “ติดตั้ง” แล้ว StudentPR จะเปิดในหน้าต่างแอปและสามารถสร้าง Shortcut ได้</p></div></div>
-              <div class="step"><div class="step-no">4</div><div><h5>เปิดใช้งานได้ทันที</h5><p>ครั้งถัดไปเปิด StudentPR จาก Desktop, Start Menu หรือ Shortcut ที่สร้างไว้</p></div></div>
-            </div>
-          </div>
-
-          <div class="tab-content" id="install-tablet">
-            <div class="steps">
-              <div class="step"><div class="step-no">1</div><div><h5>
-  เปิด Student<span class="brand-p">P</span><span class="brand-r">R</span> Desktop
-</h5><p>Tablet จะใช้หน้า StudentPR Desktop เพื่อให้พื้นที่แสดงผลครบถ้วน</p></div></div>
-              <div class="step"><div class="step-no">2</div><div><h5>Android Tablet</h5><p>เปิด Chrome → เมนู ⋮ → เลือก “ติดตั้งแอป” หรือ “เพิ่มไปยังหน้าจอหลัก”</p></div></div>
-              <div class="step"><div class="step-no">3</div><div><h5>iPad</h5><p>เปิดด้วย Safari → Share → Add to Home Screen → Add</p></div></div>
-              <div class="step"><div class="step-no">4</div><div><h5>เปิดจากไอคอน</h5><p>StudentPR จะอยู่บนหน้าจอหลักของ Tablet เพื่อเรียกใช้ได้สะดวก</p></div></div>
-            </div>
-          </div>
-
-          <div class="tab-content" id="install-mobile">
-            <div class="steps">
-              <div class="step"><div class="step-no">1</div><div><h5>
-  เปิด Student<span class="brand-p">P</span><span class="brand-r">R</span> Mobile
-</h5><p>ระบบบนหน้าเว็บนี้จะตรวจจับ Smartphone และพาไปยัง Mobile Version อัตโนมัติ</p></div></div>
-              <div class="step"><div class="step-no">2</div><div><h5>Android</h5><p>Chrome → เมนู ⋮ → “ติดตั้งแอป” หรือ “เพิ่มไปยังหน้าจอหลัก”</p></div></div>
-              <div class="step"><div class="step-no">3</div><div><h5>iPhone</h5><p>Safari → Share → Add to Home Screen → Add</p></div></div>
-              <div class="step"><div class="step-no">4</div><div><h5>พร้อมใช้งาน</h5><p>แตะไอคอน StudentPR จากหน้าจอหลักเพื่อเข้าใช้งานได้เหมือนแอป</p></div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="howto">
-    <div class="container">
-      <div class="section-head reveal">
-        <div class="kicker">HOW TO USE</div>
-        <h3>ใช้งานง่ายใน 6 ขั้นตอน</h3>
-        <p>ลำดับการใช้งานพื้นฐานเหมือนกันทุกอุปกรณ์ โดยหน้าจอจะปรับให้เหมาะกับ Desktop, Tablet และ Mobile</p>
-      </div>
-
-      <div class="workflow">
-        <article class="card reveal"><div class="number">01</div><h4>เข้าสู่ระบบ</h4><p>เปิด StudentPR และกรอกข้อมูลเข้าสู่ระบบของนักเรียนให้ครบถ้วน</p></article>
-        <article class="card reveal"><div class="number">02</div><h4>ดูภาพรวม</h4><p>ตรวจสอบข้อมูลสำคัญและสรุปผลการเรียนของตนเองจากหน้าภาพรวม</p></article>
-        <article class="card reveal"><div class="number">03</div><h4>เลือกภาคเรียน</h4><p>เลือกชั้นหรือภาคเรียนที่ต้องการตรวจสอบเมื่อมีข้อมูลพร้อมให้แสดง</p></article>
-        <article class="card reveal"><div class="number">04</div><h4>ดูรายละเอียด</h4><p>เปิดดูรายวิชา หน่วยกิต เกรด GPA / GPAX และข้อมูลประกอบอื่น ๆ</p></article>
-        <article class="card reveal"><div class="number">05</div><h4>ติดตามความเสี่ยง</h4><p>ตรวจสอบรายการที่ควรติดตามเพื่อช่วยวางแผนการเรียนให้ทันเวลา</p></article>
-        <article class="card reveal"><div class="number">06</div><h4>ตรวจสอบสถานะ</h4><p>ติดตามข้อมูลสำคัญ เช่น ข้อมูลสอบแก้ตัว และการอัปเดตจากระบบ</p></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="stats-section">
-    <div class="container">
-      <div class="stats">
-        <div class="card stat reveal"><strong>24 Hours</strong><span>เข้าถึงข้อมูลได้ทุกเวลา</span></div>
-        <div class="card stat reveal"><strong>3 devices</strong><span>Desktop • Tablet • Mobile</span></div>
-        <div class="card stat reveal"><strong>1 App</strong><span>StudentPR สำหรับข้อมูลของคุณ</span></div>
-        <div class="card stat reveal"><strong>PWA</strong><span>ติดตั้งได้เหมือนแอป</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="security-section">
-    <div class="container">
-      <div class="security reveal">
-        <div>
-          <div class="kicker">PRIVACY & SECURITY</div>
-          <h3>ข้อมูลของคุณสำคัญ</h3>
-          <p>StudentPR เป็นพื้นที่สำหรับข้อมูลการเรียนของนักเรียน ควรใช้งานอย่างระมัดระวัง โดยเฉพาะเมื่อเข้าสู่ระบบจากอุปกรณ์ที่ใช้ร่วมกับผู้อื่น</p>
-        </div>
-        <div class="security-list">
-          <div class="secure-item"><span>✓</span><div>ไม่เปิดเผยข้อมูลเข้าสู่ระบบให้บุคคลอื่น</div></div>
-          <div class="secure-item"><span>✓</span><div>ใช้ตัวเลือก “จำฉันไว้” เฉพาะอุปกรณ์ส่วนตัว</div></div>
-          <div class="secure-item"><span>✓</span><div>ออกจากระบบทุกครั้งเมื่อใช้งานคอมพิวเตอร์สาธารณะ</div></div>
-          <div class="secure-item"><span>✓</span><div>หากพบข้อมูลผิดปกติ ให้ติดต่อผู้ดูแลระบบของโรงเรียน</div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="faq">
-    <div class="container">
-      <div class="section-head reveal">
-        <div class="kicker">FAQ</div>
-        <h3>คำถามที่พบบ่อย</h3>
-      </div>
-
-      <div class="faq">
-        <details class="reveal">
-          <summary>ต้องติดตั้ง StudentPR ก่อนใช้งานหรือไม่?</summary>
-          <p>ไม่จำเป็น สามารถเปิด StudentPR ผ่าน Browser ได้ทันที การติดตั้งเป็นเพียงตัวเลือกเพื่อให้เปิดใช้งานได้สะดวกเหมือนแอป</p>
-        </details>
-        <details class="reveal">
-          <summary>Tablet ต้องใช้ StudentPR เวอร์ชันไหน?</summary>
-          <p>Tablet ใช้ StudentPR Desktop เพื่อให้การจัดวางข้อมูลเหมาะกับพื้นที่หน้าจอที่กว้างกว่าสมาร์ตโฟน</p>
-        </details>
-        <details class="reveal">
-          <summary>iPhone และ iPad ติดตั้งอย่างไร?</summary>
-          <p>เปิด StudentPR ด้วย Safari จากนั้นกด Share → Add to Home Screen → Add</p>
-        </details>
-        <details class="reveal">
-          <summary>ทำไมยังไม่เห็นผลการเรียนบางภาคเรียน?</summary>
-          <p>ผลการเรียนจะแสดงเมื่อข้อมูลของภาคเรียนนั้นพร้อมและได้รับการเผยแพร่ในระบบแล้ว</p>
-        </details>
-        <details class="reveal">
-          <summary>ใช้ StudentPR บนคอมพิวเตอร์ของโรงเรียนได้หรือไม่?</summary>
-          <p>ใช้งานได้ แต่ควรออกจากระบบเมื่อใช้งานเสร็จ และไม่ควรเลือกให้ Browser จดจำข้อมูลเข้าสู่ระบบบนเครื่องที่ใช้ร่วมกัน</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <section id="finalCtaSection">
-    <div class="container">
-      <div class="cta reveal">
-        <h3>
-  พร้อมเข้าสู่
-  Student<span class="brand-p">P</span><span class="brand-r">R</span>
-  แล้วหรือยัง?
-</h3>
-        <p>ตรวจสอบข้อมูลการเรียนของคุณได้จากทุกอุปกรณ์ ระบบจะเลือกเวอร์ชันที่เหมาะสมให้อัตโนมัติ</p>
-        <div class="cta-actions">
-         <button class="btn btn-white btn-lg" type="button" onclick="openStudentPR()">
-  🚀 เข้าสู่
-  Student<span class="brand-p">P</span><span class="brand-r">R</span>
-</button>
-          <button class="btn btn-secondary btn-lg" type="button" onclick="openChoice()">เลือกเวอร์ชันเอง</button>
-        </div>
-      </div>
-    </div>
-  </section>
 </main>
 
-<footer>
-  <div class="container footer-inner">
 
-    <div class="footer-brand">
-      <strong class="footer-studentpr">
-        Student<span class="brand-p">P</span><span class="brand-r">R</span>
-      </strong>
-
-      <span class="footer-subtitle">
-        Student Academic Portal
-      </span>
-
-      <span class="footer-school">
-        โรงเรียนท่าใหม่ “พูลสวัสดิ์ราษฎร์นุกูล”
-      </span>
-    </div>
-
-    <div class="footer-links">
-      <a href="#features">ความสามารถ</a>
-      <a href="#install">วิธีติดตั้ง</a>
-      <a href="#howto">วิธีใช้งาน</a>
-      <a href="#faq">FAQ</a>
-    </div>
-
-  </div>
-</footer>
 
 <div class="manual-choice" id="manualChoice" role="dialog" aria-modal="true" aria-labelledby="choiceTitle">
   <div class="choice-box">
